@@ -12,7 +12,7 @@ export class AppController {
   @Get('xslfile')
   @Header('Content-Type', 'text/xml')
   getXslFile(@Res({ passthrough: true }) res: ExpressResponse): any {
-    const file = createReadStream(join(process.cwd(), 'src/newsitem.xsl'));
+    const file = createReadStream(join(process.cwd(), 'src/newsItem.xsl'));
     // file.pipe(res);
     return new StreamableFile(file);
   }
