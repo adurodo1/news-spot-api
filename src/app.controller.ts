@@ -23,7 +23,7 @@ export class AppController {
     @Res({ passthrough: true }) res: ExpressResponse,
   ): any {
     const file = createReadStream(
-      join(process.cwd(), '\\src\\groupnewsItem.xsl'),
+      join(process.cwd(), 'src\\groupnewsItem.xsl'),
     );
     // file.pipe(res);
     return new StreamableFile(file);
